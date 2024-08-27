@@ -1,0 +1,4 @@
+node_modules/
+
+# db.json is updated by json-server - ignore any changes to it
+db.json

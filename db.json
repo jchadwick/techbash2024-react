@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Walter White",
+      "email": "walter.white@lospolloshermanos.com"
+    },
+    {
+      "id": "2",
+      "name": "Daenerys Targaryen",
+      "email": "daenerys.targaryen@dragonqueen.com"
+    },
+    {
+      "id": "3",
+      "name": "Tony Stark",
+      "email": "tony.stark@starkindustries.com"
+    },
+    {
+      "id": "4",
+      "name": "Hermione Granger",
+      "email": "hermione.granger@hogwarts.edu"
+    },
+    {
+      "id": "5",
+      "name": "Jon Snow",
+      "email": "jon.snow@thenorth.com"
+    },
+    {
+      "id": "6",
+      "name": "Arya Stark",
+      "email": "arya.stark@faceless.org"
+    },
+    {
+      "id": "7",
+      "name": "Frodo Baggins",
+      "email": "frodo.baggins@shiremail.com"
+    },
+    {
+      "id": "8",
+      "name": "Luke Skywalker",
+      "email": "luke.skywalker@jediorder.com"
+    },
+    {
+      "id": "9",
+      "name": "Leia Organa",
+      "email": "leia.organa@rebelalliance.com"
+    },
+    {
+      "id": "10",
+      "name": "Sherlock Holmes",
+      "email": "sherlock.holmes@221bbakerstreet.com"
+    }
+  ]
+}

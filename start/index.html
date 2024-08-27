@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Manager</title>
+    <link href="site.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <div id="root">
+      <div class="max-w-3xl mx-auto py-10">
+        <div class="flex flex-row items-center mb-8">
+          <h1 class="flex-grow text-4xl font-bold">User Manager</h1>
+          <div class="flex flex-row gap-1">
+            <span id="username">Admin</span>
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm8.127 19.41c-.282-.401-.772-.654-1.624-.85-3.848-.906-4.097-1.501-4.352-2.059-.259-.565-.19-1.23.205-1.977 1.726-3.257 2.09-6.024 1.027-7.79-.674-1.119-1.875-1.734-3.383-1.734-1.521 0-2.732.626-3.409 1.763-1.066 1.789-.693 4.544 1.049 7.757.402.742.476 1.406.22 1.974-.265.586-.611 1.19-4.365 2.066-.852.196-1.342.449-1.623.848 2.012 2.207 4.91 3.592 8.128 3.592s6.115-1.385 8.127-3.59zm.65-.782c1.395-1.844 2.223-4.14 2.223-6.628 0-6.071-4.929-11-11-11s-11 4.929-11 11c0 2.487.827 4.783 2.222 6.626.409-.452 1.049-.81 2.049-1.041 2.025-.462 3.376-.836 3.678-1.502.122-.272.061-.628-.188-1.087-1.917-3.535-2.282-6.641-1.03-8.745.853-1.431 2.408-2.251 4.269-2.251 1.845 0 3.391.808 4.24 2.218 1.251 2.079.896 5.195-1 8.774-.245.463-.304.821-.179 1.094.305.668 1.644 1.038 3.667 1.499 1 .23 1.64.59 2.049 1.043z"
+              />
+            </svg>
+          </div>
+        </div>
+        <slot id="content"></slot>
+      </div>
+    </div>
+
+    <!-- TEMPLATES -->
+
+    <!-- TEMPLATE: Users Page -->
+    <template id="users-page">
+      <div>
+        <div class="mb-4 text-right">
+          <a
+            name="add-user"
+            href="#/users"
+            class="w-full text-sm bg-blue-600 text-white py-1 px-2 rounded-lg hover:bg-blue-700 transition"
+            >Add User</a
+          >
+        </div>
+        <slot name="list-container"></slot>
+        <div name="dialog"></div>
+      </div>
+    </template>
+
+    <!-- TEMPLATE: Users List -->
+    <template id="user-list">
+      <ul class="bg-white shadow rounded-lg divide-y divide-gray-200"></ul>
+    </template>
+
+    <!-- TEMPLATE: User List Item -->
+    <template id="user-list-item">
+      <li class="p-4 cursor-pointer">
+        <slot name="name"></slot>
+      </li>
+    </template>
+
+    <!-- TEMPLATE: User Details -->
+    <template id="user-details">
+      <div class="max-w-lg mx-auto py-10">
+        <div class="bg-white shadow rounded-lg p-6">
+          <h2 class="text-2xl font-semibold mb-4"><slot name="name" /></h2>
+          <p class="text-lg font-medium"><slot name="email" /></p>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="#/users" class="text-blue-600 underline"
+            >Back to Users List</a
+          >
+        </div>
+      </div>
+    </template>
+
+    <!-- TEMPLATE: New User -->
+    <template id="new-user-form">
+      <div class="fixed top-0 w-full h-full bg-gray-100">
+        <div class="max-w-lg mx-auto py-10">
+          <div class="bg-white shadow rounded-lg p-6">
+            <h1 class="text-2xl font-bold mb-6">Create a New User</h1>
+            <form id="new-user-form" class="space-y-4">
+              <div>
+                <label for="name" class="block text-lg font-medium"
+                  >Name:</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-2"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-lg font-medium"
+                  >Email:</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-2"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition"
+              >
+                Create User
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
