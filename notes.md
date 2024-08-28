@@ -1,17 +1,3 @@
-## Setup:
-
-- [ ] Reset repository
-  - [ ] `git checkout -f main && git clean -df`
-- [ ] Start the API
-  - [ ] `npx json-server db.json`
-  - [ ] Verify running at http://localhost:3000/users
-- [ ] Open demo application
-  - [ ] `code start`
-  - [ ] `npx live-server`
-- [ ] Create and open new folder for new application
-  - [ ] `mkdir react-demo`
-  - [ ] `code react-demo`
-
 ## Presentation:
 
 - [ ] Show the demo application
