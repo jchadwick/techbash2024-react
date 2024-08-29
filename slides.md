@@ -113,7 +113,7 @@ function App() {
 
 # Virtual DOM in Action
 
-![w:450 h:200](./static/virtualdom.jpeg)
+![w:450 h:200](./img/virtualdom.jpeg)
 _[Fidisys](https://www.linkedin.com/company/fidisys/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BK7kioCELRo2Fv1FufTzMkQ%3D%3D), [LinkedIn](https://media.licdn.com/dms/image/v2/D5612AQHrTcE_Vu_qjQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1694674429966?e=1730332800&v=beta&t=jPprwlSJ9A9373G_MEscJaER5eNnPik4VeVuGPrOyDw)_
 
 - Virtual DOM is a lightweight copy of the actual DOM

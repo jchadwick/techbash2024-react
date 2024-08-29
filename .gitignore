@@ -1,5 +1,6 @@
 node_modules/
 react-app/
+slides/
 
 # db.json is updated by json-server - ignore any changes to it
 db.json
