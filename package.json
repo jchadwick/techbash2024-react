@@ -1,8 +1,7 @@
 {
   "scripts": {
-    "start": "run-p -l json:server start:demo start:react-app",
+    "start": "run-p -l json:server start:demo",
     "start:demo": "live-server --port=3001 --open=/ ./demo",
-    "start:react-app": "live-server --port=3002 --open=/ ./react-app",
     "json:server": "json-server db.json"
   },
   "devDependencies": {
