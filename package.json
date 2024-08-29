@@ -1,7 +1,11 @@
 {
   "scripts": {
+    "clean": "git checkout main -- db.json && rm -rf react-app",
+    "present": "run-s clean && run-p start open:react-app open:presentation",
     "start": "run-p -l json:server start:demo",
     "start:demo": "live-server --port=3001 --open=/ ./demo",
+    "open:presentation": "open https://www.jesschadwick.com/techbash2024-react/",
+    "open:react-app": "mkdir -p react-app && rm -rf react-app/* && code react-app",
     "json:server": "json-server db.json"
   },
   "devDependencies": {
