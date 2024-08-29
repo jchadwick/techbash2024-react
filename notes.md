@@ -1,5 +1,7 @@
 ## Presentation:
 
+### Setup
+
 - [ ] Show the demo application
 - [ ] Switch to new application
 - [ ] Create `index.html`
