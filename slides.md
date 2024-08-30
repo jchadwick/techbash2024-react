@@ -31,8 +31,7 @@ _paginate: skip
 
 # Getting Started with React
 
-
-*How to get started with React framework without a computer science degree*
+_How to get started with React framework without a computer science degree_
 
 ###
 
@@ -107,7 +106,7 @@ function App() {
 ```
 
 - React uses **JSX** (JavaScript XML), which allows embedding HTML in JavaScript
-- *Transpiled* to regular JavaScript by tools like Babel
+- _Transpiled_ to regular JavaScript by tools like Babel
 
 ---
 
@@ -121,4 +120,3 @@ _[Fidisys](https://www.linkedin.com/company/fidisys/?lipi=urn%3Ali%3Apage%3Ad_fl
   1. React updates the virtual DOM
   2. It compares the new virtual DOM with the previous one
   3. Only the differences are applied to the real DOM
-
