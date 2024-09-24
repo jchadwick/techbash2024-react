@@ -2,5 +2,7 @@ node_modules/
 react-app/
 slides/
 
+.DS_Store
+
 # db.json is updated by json-server - ignore any changes to it
 db.json
