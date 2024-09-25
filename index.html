@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Getting Started with React - TechBash 2024</title>
+   <link rel="stylesheet" href="/node_modules/reveal.js/dist/reset.css" />
+   <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+   <link id="theme" rel="stylesheet" href="/node_modules/reveal.js/dist/theme/simple.css" />
+   <link rel="stylesheet" href="/css/themes/xcode.css" />
+   <link rel="stylesheet" href="/css/jchadwick.css" />
+</head>
+
+<body>
+   <div class="reveal">
+      <div class="slides">
+         <section id="title">
+            <h2>
+               Getting Started with React
+            </h2>
+
+            <div class="r-stretch">
+               <p class="mt-3 italic font-sm">
+                  How to start using React without a computer science degree
+               </p>
+               <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
+            </div>
+
+            <div class="flex-row font-sm">
+               <img class="r-frame avatar" src="images/headshot.jpg" />
+               <div class="flex-column grow p-1 align-start justify-between">
+                  <strong>Jess Chadwick</strong>
+                  <a href="https://github.com/jchadwick">
+                     github.com/jchadwick
+                  </a>
+               </div>
+            </div>
+         </section>
+
+         <section id="what-is-react">
+            <h2>What is React?</h2>
+            <ul>
+               <li><strong>JavaScript library</strong> for building user interfaces</li>
+               <li>Developed by <strong>Facebook</strong> in 2013</li>
+               <li>Manages the <strong>view layer</strong> in web (or native!) applications</li>
+            </ul>
+            <p><em>React is efficient, declarative, and flexible</em></p>
+         </section>
+
+         <section id="features">
+            <section data-auto-animate>
+               <h2>Key Features of React</h2>
+               <ol class="r-stretch">
+                  <li>Component-Based</li>
+                  <li data-animate-id="jsx">JSX Syntax</li>
+                  <li>Virtual DOM</li>
+               </ol>
+            </section>
+            <section data-auto-animate>
+               <h2>Key Features of React</h2>
+               <ol class="r-stretch">
+                  <li><strong>Component-Based</strong>
+                     <div class="font-sm">
+                        Encapsulated components manage their own state and have well-defined contracts with
+                        inputs and outputs (aka events)
+                     </div>
+
+                     <pre><code class="language-html" data-trim>
+                     &lt;Title>Current Users&lt;/Title&gt;
+
+                     &lt;UsersList 
+                        users={selectedUsers} 
+                        onUserSelected={handleUserSelected} 
+                     />
+                     </code></pre>
+
+                     <div class="font-sm">Potential for reuse <em>(but that's not the point!)</em></div>
+                  </li>
+                  <li data-animate-id="jsx">
+                     JSX Syntax</li>
+                  <li>Virtual DOM</li>
+               </ol>
+            </section>
+            <section data-auto-animate>
+               <h2>Key Features of React</h2>
+               <ol class="r-stretch">
+                  <li>Component-Based</li>
+                  <li data-animate-id="jsx">
+                     <strong>JSX Syntax</strong> (JavaScript XML) allows you to mix HTML and JavaScript
+                     <pre><code class="language-jsx" data-trim>
+                        function UsersList() {
+                           const users = [ { name: 'Alice' }, { name: 'Bob' } ];
+
+                           return (
+                              &lt;ul&gt
+                                 {users.map(user => (
+                                    &lt;li&gt{user.name}&lt;/li&gt
+                                 ))}
+                              &lt;/ul&gt
+                           );
+                        }
+                     </code></pre>
+                     <div class="font-xs"><em>Transpiled</em> to regular JavaScript by tools like Babel</div>
+                  </li>
+                  <li>Virtual DOM</li>
+               </ol>
+            </section>
+            <section data-auto-animate>
+               <h2>Key Features of React</h2>
+               <ol class="r-stretch">
+                  <li>Component-Based</li>
+                  <li data-animate-id="jsx">JSX Syntax</li>
+                  <li><strong>Virtual DOM</strong>
+                     <div class="flex flex-row">
+                        <ul style="width: 45%;">
+                           <li>In-memory copy of actual DOM</li>
+                           <li>When the state changes, React:
+                              <ol>
+                                 <li>Re-renders affected components into the virtual DOM</li>
+                                 <li>Compares the new virtual DOM with the previous one</li>
+                                 <li>Applies <strong>only the differences</strong> to the real DOM</li>
+                              </ol>
+                           </li>
+                        </ul>
+                        <div class="grow flex flex-column items-center" style="height: 5em;">
+                           <img style="object-fit: contain; margin: 0;" src="./images/virtualdom.jpeg"
+                              alt="Virtual DOM" />
+                           <span class="caption">
+                              <a
+                                 href="https://www.linkedin.com/company/fidisys/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BK7kioCELRo2Fv1FufTzMkQ%3D%3D">Fidisys,</a>
+                              <a
+                                 href="https://media.licdn.com/dms/image/v2/D5612AQHrTcE_Vu_qjQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1694674429966?e=1730332800&v=beta&t=jPprwlSJ9A9373G_MEscJaER5eNnPik4VeVuGPrOyDw">LinkedIn</a>
+                           </span>
+                        </div>
+                     </div>
+                  </li>
+               </ol>
+            </section>
+         </section>
+
+         <section>
+            <h2>Coding Time</h2>
+            <img src="images/lets-do-this.webp" />
+         </section>
+
+      </div>
+   </div>
+   <script src="/node_modules/reveal.js/dist/reveal.js"></script>
+   <script src="/node_modules/reveal.js/plugin/notes/notes.js"></script>
+   <script src="/node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+   <script src="/node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+   <script>
+      Reveal.initialize({
+         hash: true,
+         plugins: [
+            RevealMarkdown,
+            RevealHighlight,
+            RevealNotes,
+         ],
+      });
+   </script>
+</body>
+
+</html>
