@@ -7,9 +7,9 @@
     "demo:server": "git checkout -- db.json && json-server db.json",
     "demo-app:init": "mkdir -p react-app && rm -rf react-app/* && cp demo/site.css demo/users-api.js react-app && cp converted/index.html.txt react-app/index.html",
     "start": "run-p slides:serve slides:open demo-app:init",
-    "slides:serve": "parcel serve --watch-dir ./ index.html",
+    "slides:serve": "cd slides && rimraf .parcel-cache && parcel serve --watch-dir ./ index.html",
     "slides:open": "open http://localhost:1234",
-    "slides:render": "parcel build --public-url=./ index.html"
+    "slides:render": "cd slides && rimraf .parcel-cache && parcel build --public-url=./ index.html"
   },
   "devDependencies": {
     "cpy-cli": "^5.0.0",

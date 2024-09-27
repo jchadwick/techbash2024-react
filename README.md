@@ -4,8 +4,6 @@ Welcome to the repository for the "Getting Started With React" presentation at T
 
 This repository contains the slide deck and code examples used during the presentation.
 
-This repository contains the slide deck and code examples used during the presentation.
-
 **Check out the [slides online](https://www.jesschadwick.com/techbash2024-react)**
 
 ## Contents

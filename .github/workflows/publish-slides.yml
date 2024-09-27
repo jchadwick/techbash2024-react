@@ -14,37 +14,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Ensure build dir exists
-        run: mkdir -p slides
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
 
-      - name: Copy images directory (if exists)
-        run: if [[ -d img ]]; then cp -R img slides/img; fi
+      - name: Install NPM packages
+        run: npm ci
 
-      - name: Marp Build - HTML
-        uses: docker://marpteam/marp-cli:v3.0.2
-        with:
-          args: slides.md -o slides/index.html
-        env:
-          MARP_USER: root:root
-
-      - name: Marp Build - PDF
-        uses: docker://marpteam/marp-cli:v3.0.2
-        with:
-          args: slides.md --allow-local-files -o slides/GettingStartedWithReact.pdf
-        env:
-          MARP_USER: root:root
-
-      - name: Marp Build - PPTX
-        uses: docker://marpteam/marp-cli:v3.0.2
-        with:
-          args: slides.md --allow-local-files -o slides/GettingStartedWithReact.pptx
-        env:
-          MARP_USER: root:root
+      - name: Build Slides
+        run: npm run build
 
       - name: Publish slides artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./slides"
+          path: "./dist"
 
   deploy:
     runs-on: ubuntu-latest
